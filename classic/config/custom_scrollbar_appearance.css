@@ -12,18 +12,20 @@
 /* [!] width value settings are only compatible with 'web content' at the moment ********/
 
 :root{
-  scrollbar-face-color: lightblue; /* background color (Firefox 63 only) */
-  scrollbar-track-color: lightgrey; /* thumb/slider color (Firefox 63 only) */
+  /* scrollbar-face-color: lightblue; /* background color (Firefox 63 only) */
+  /* scrollbar-track-color: lightgrey; /* thumb/slider color (Firefox 63 only) */
   
   /* background color [1. color] // thumb/slider color [2. color] (Firefox 64+) *********/
-  scrollbar-color: lightblue lightgrey;
+  /*scrollbar-color: lightblue lightgrey; */
+  scrollbar-color: blue lightgrey;
   
   /* size/width *************************************************************************/
   /*	scrollbar-width: auto; = default OS scrollbars
 		scrollbar-width: thin; = small scrollbars without buttons
 		scrollbar-width: none; = scrollbars are hidden
 		scrollbar-width: 17px; (not working yet, but might be supported in the future)  */
-  scrollbar-width: thin;
+  /* scrollbar-width: thin; */
+  scrollbar-width: auto;
 }
 
 /* MDN web docs (color): https://developer.mozilla.org/docs/Web/CSS/scrollbar-color *****/
