@@ -1,9 +1,14 @@
-/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Firefox userChrome.css tweaks ********************************************************/
 /* Github: https://github.com/aris-t2/customcssforfx ************************************/
 /****************************************************************************************/
 
 
-.tab-label {
-  -moz-box-flex: 1 !important;
-  text-align: right !important;
+.tab-label-container {
+  display: grid !important;
+  justify-items: safe right !important;
 }
+  
+.tab-label {
+  overflow: hidden !important;
+}
+

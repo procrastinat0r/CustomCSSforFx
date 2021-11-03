@@ -1,8 +1,9 @@
-/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Firefox userChrome.css tweaks ********************************************************/
 /* Github: https://github.com/aris-t2/customcssforfx ************************************/
 /****************************************************************************************/
 
 
+.folder-icon,
 #editBMPanel_chooseFolderMenuItem .menu-iconic-icon,
 treechildren::-moz-tree-image(title, container),
 treechildren::-moz-tree-image(title, query, hostContainer) {
@@ -68,16 +69,18 @@ treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
 }
 
 treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
-  list-style-image: url("chrome://browser/skin/downloads/download-icons.svg#arrow-with-bar") !important;
+  list-style-image: url("chrome://browser/skin/downloads/downloads.svg") !important;
   -moz-image-region: auto !important;
 }
 
-.bookmark-item[container] {
+toolbarbutton.bookmark-item[container],
+.bookmark-item[container] .menu-iconic-left .menu-iconic-icon {
   list-style-image: url("./../../image/folder-item.png") !important;
   -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
 }
 
-.bookmark-item[container][open] {
+toolbarbutton.bookmark-item[container][open],
+.bookmark-item[container][open] .menu-iconic-left .menu-iconic-icon {
   -moz-image-region: rect(16px, 32px, 32px, 16px) !important;
 }
 
@@ -85,18 +88,18 @@ treechildren::-moz-tree-image(query, OrganizerQuery_downloads__v) {
   list-style-image: url("./../../image/livemark-folder.png") !important;
   -moz-image-region: auto !important;
 }
-
-
 .bookmark-item[container][livemark] .bookmark-item {
   list-style-image: url("./../../image/livemark-item.png") !important;
   -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
 }
-
 .bookmark-item[container][livemark] .bookmark-item[visited] {
   -moz-image-region: rect(0px, 32px, 16px, 16px) !important;
 }
 
-.bookmark-item[container][query] {
+.bookmark-item[container][query],
+.bookmark-item[container][query][open],
+.bookmark-item[container][query] > .menu-iconic-left > .menu-iconic-icon,
+.bookmark-item[container][query][open] > .menu-iconic-left > .menu-iconic-icon {
   list-style-image: url("./../../image/query.png") !important;
   -moz-image-region: auto !important;
 }
@@ -134,18 +137,16 @@ treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v),
   list-style-image: url("./../../image/feedIcon16.png") !important;
 }
 
-#bookmarksToolbarFolderMenu,
-#BMB_bookmarksToolbar,
+#bookmarksToolbarFolderMenu > .menu-iconic-left > .menu-iconic-icon,
+#BMB_bookmarksToolbar > .menu-iconic-left > .menu-iconic-icon,
 #panelMenu_bookmarksToolbar {
   list-style-image: url("./../../image/bookmarksToolbar.png") !important;
   -moz-image-region: auto !important;
 }
 
-#menu_unsortedBookmarks,
-#BMB_unsortedBookmarks,
+#menu_unsortedBookmarks > .menu-iconic-left > .menu-iconic-icon,
+#BMB_unsortedBookmarks > .menu-iconic-left > .menu-iconic-icon,
 #panelMenu_unsortedBookmarks {
   list-style-image: url("./../../image/unsortedBookmarks.png") !important;
   -moz-image-region: auto !important;
 }
-
-/**/

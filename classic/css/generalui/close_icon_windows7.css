@@ -1,4 +1,4 @@
-/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Firefox userChrome.css tweaks ********************************************************/
 /* Github: https://github.com/aris-t2/customcssforfx ************************************/
 /****************************************************************************************/
 
@@ -62,4 +62,15 @@
   box-shadow: unset !important;
   padding: 0px !important;
   margin: 0px !important;
+}
+
+#TabsToolbar .tabbrowser-tab .tab-content .close-icon {
+  background: unset !important;
+}
+
+.tab-close-button {
+  width: 16px !important;
+  height: 16px !important;
+  padding: unset !important;
+  border-radius: unset !important;
 }
