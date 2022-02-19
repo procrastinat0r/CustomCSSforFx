@@ -264,7 +264,7 @@
 }
 
 /* Windows 10 fix */
-@media (-moz-os-version: windows-win10) {
+@media (-moz-platform: windows-win10), (-moz-os-version: windows-win10) {
 	.titlebar-button {
 	  padding-top: 7px !important;
 	  padding-bottom: 7px !important;
@@ -389,7 +389,7 @@
   margin-top: 0 !important;
 }
 
-@media (-moz-os-version: windows-win10) {
+@media (-moz-platform: windows-win10), (-moz-os-version: windows-win10) {
   #main-window[sizemode="maximized"] .titlebar-buttonbox-container {
 	margin-inline-end: -2px !important;
   }
@@ -458,4 +458,9 @@
 :root:not([lwtheme-mozlightdark]) #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected=true], [multiselected]) > .tab-stack > .tab-background:-moz-lwtheme,
 :root:not([lwtheme-mozlightdark]) #TabsToolbar[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected=true], [multiselected]) > .tab-stack > .tab-background:-moz-lwtheme {
   box-shadow: unset !important;
+}
+
+/* Fx 97+ height fix */
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+  height: unset !important;
 }

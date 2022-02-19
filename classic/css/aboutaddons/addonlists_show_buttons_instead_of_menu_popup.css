@@ -92,6 +92,13 @@
 	  flex-flow: row wrap !important;
 	  justify-content: flex-start !important;
 	}
+	
+	
+	div[role="presentation"].list {
+	  display: flex !important;
+	  flex-flow: row wrap !important;
+	  justify-content: flex-start !important;
+	}
 
 	panel-item[action="preferences"] {
 	  order: -1;
@@ -323,7 +330,7 @@
 	}
 	
 	addon-list[type="theme"].monochromatic-addon-list .card-heading-image {
-	  width: 350px !important;
+	  max-width: 335px !important;
 	}
 
 }

@@ -1,11 +1,11 @@
 /* Firefox userChrome.css tweaks ****************************************************************/
-/* code mostly taken from 'Classic Theme Restorer' & 'Classic Toolbar Buttons' add-ons **********/
+/* Based on 'Classic Theme Restorer' & 'Classic Toolbar Buttons' add-ons CSS code ***************/
 /* Github: https://github.com/aris-t2/customcssforfx ********************************************/
 /************************************************************************************************/
 
 /************************************************************************************************/
 /* Custom CSS for Firefox 91+ *******************************************************************/
-/* version 4.1.1 ********************************************************************************/
+/* Version 4.1.5v5 ******************************************************************************/
 /************************************************************************************************/
 
 /*************************************************************************************************
@@ -21,7 +21,8 @@
 
   README
 
-  Finding profile folder: address bar > about:support > Profile Folder > Open Folder
+  Profile folder: address bar > about:support > Profile Folder > Open Folder
+  
   CSS files and sub-folders belong into \PROFILEFOLDER\chrome\ directory.
   \chrome\config\
   \chrome\css\
@@ -29,13 +30,10 @@
   \chrome\userChrome.css
   \chrome\userContent.css
 
-  ENABLING options: remove the combination of / and * in front of '@import'
-  DISABLING options: add the combination of / and * in front of '@import'
+  ACTIVE option: remove /* before '@import'
+  DEACTIVATE option: add /* before '@import'
 
-  macOS issues / glitches / fixes -> look for 'macOS fix' additions inside this file
-  - tabs toolbar spaces in 'toolbars' category
-  - tabs not on top mode in 'tabs toolbar position' category
-  - page context items in 'general ui' category
+  macOS specific code -> look for 'macOS fix' additions inside this file
 
   EXPERIMENTAL settings are for testing only!
 
@@ -54,9 +52,8 @@
   - custom tab appearance / old squared tabs
   - TABS TOOLBAR POSITION
   -- below titlebar / navigation and bookmarks toolbar / main content
-  - TAB TEXT - colors/shadow/weight/style for default/active/hovered/unloaded tabs
+  - TAB TEXT - colors/shadow/weight/style for default/active/hovered/pending tabs
   - MULTIROW / multi lined tabs
-  - TAB TITLE IN FIREFOX TITLEBAR
   - empty tab favicon / custom tab loading animation / tab close icon settings
   - settings for DEFAULT TABS / other tab settings
   GENERAL UI
@@ -64,8 +61,6 @@
   - overflow menu / sidebar / findbar
   - SEARCHBAR
   -- general settings for default search
-  -- OLD SEARCH + old search 'about:config' settings
-  - MENUBARS bookmarks menu popup items
   TOOLBARS
   - ADDONS BAR (simulated bottoms toolbar)
   - GENERAL TOOLBAR settings
@@ -76,7 +71,7 @@
   - AeroGlass TOOLBARS / WIN10 fix for GLASS8
   - TOOLBAR TEXT MODES
   -- icons+text / text only
-  LOCATION BAR / urlbar / awesomebar
+  LOCATION BAR / urlbar / mega bar
   - general location bar tweaks / identity box / padlock icons icon/button tweaks
   - 'autocomplete popup' appearance / result item settings/appearance
 
@@ -122,6 +117,8 @@
 /************************************************************************************************/
 
 /* icon appearance - [only use one at a time] (custom icons do not scale in HiDPI modes) ********/
+/* [!] custom icons sets do not offer modern download progress animations on purpose! ***********/
+/* [!] disable button badge indicator with the 'option' below custom icon sets ******************/
 @import "./css/buttons/icons_colorized.css"; /**/
 /* @import "./css/buttons/icons_white_icons.css"; /**/
 /* @import "./css/buttons/icons_custom_icons.css"; /**/  /* aka "Mozilla Mix" from CTB */
@@ -141,10 +138,6 @@
 /* @import "./css/buttons/icons_custom_icons_tango.css"; /**/
 /* @import "./css/buttons/icons_custom_icons_fx45.css"; /**/
 /* @import "./css/buttons/icons_custom_icons_fx45_inverted.css"; /**/
-
-/* 'icons_custom_icons*.css' options: hide 'downloads buttons badge' ****************************/
-/* @import "./css/buttons/icons_custom_icons_hide_downloads_badge.css"; /**/
-
 
 /* 'classic' pre-Proton button padding **********************************************************/
 /* @import "./css/buttons/classic_button_padding.css"; /**/
@@ -545,7 +538,7 @@
 /* other toolbar settings ***********************************************************************/
 @import "./css/toolbars/toolbars_old_padding.css"; /**/
 @import "./css/toolbars/tabs_toolbar_adjustments.css"; /**/
-/* @import "./css/toolbars/tabs_toolbar_remove background_fog_win7.css"; /**/
+/* @import "./css/toolbars/tabs_toolbar_remove_background_fog_win7.css"; /**/
 /* @import "./css/toolbars/tabs_toolbar_adjustments_macOS_fix.css"; /**/					/*  <-- macOS fix */
 @import "./css/toolbars/searchbar_on_menubar_fix.css"; /**/		/* placing searchbar on menubar requires adjustments */
 
@@ -610,6 +603,7 @@
 /* identity box / page identity button **********************************************************/
 /* @import "./css/locationbar/identitybox_colors.css"; /**/
 /* @import "./css/locationbar/identitybox_labels_hidden.css"; /**/
+/* @import "./css/locationbar/identitybox_replace_search_icon_with_globe.css"; /**/
 
 /* padlock icons in identity box / page identity button - [only use one at a time] **************/
 /* @import "./css/locationbar/identitybox_padlock_icon_classic.css"; /**/
@@ -619,6 +613,7 @@
 /* @import "./css/locationbar/identitybox_padlock_icon_hidden.css"; /**/
 
 /* additional icons/buttons and tweaks for third party page action buttons **********************/
+/* @import "./css/locationbar/icons_colorized.css"; /**/
 /* @import "./css/locationbar/reader_alternative_icon.css"; /**/
 /* @import "./css/locationbar/popup_blocked_button_hidden.css"; /**/
 /* @import "./css/locationbar/zoom_button_hidden.css"; /**/

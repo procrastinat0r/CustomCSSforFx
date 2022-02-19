@@ -3,6 +3,9 @@
 /****************************************************************************************/
 
 
-#downloads-button:is([progress],[counter],[paused],[attention])::after { 
-  display: none !important;
+#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+  list-style-image:url('./../../image/globe.svg') !important;
+  filter: unset !important;
+  fill: unset !important;
+  opacity: 1.0 !important;
 }
