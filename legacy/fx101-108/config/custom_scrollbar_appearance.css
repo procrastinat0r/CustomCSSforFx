@@ -17,7 +17,7 @@
   
   /* background color [1. color] // thumb/slider color [2. color] (Firefox 64+) *********/
   scrollbar-color: lightblue lightgrey;
-
+  
   /* size/width *************************************************************************/
   /*	scrollbar-width: auto; = default OS scrollbars
 		scrollbar-width: thin; = small scrollbars without buttons
