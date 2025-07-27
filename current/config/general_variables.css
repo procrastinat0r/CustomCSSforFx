@@ -30,13 +30,13 @@
   /* for 'tab_maxwidth.css'
   - unlock 'min width' code inside file first for '--tab_min_width' to work */
   /* --tab-min-width: 50px !important; */
-  --tab_min_width: 50px !important; 
-  --tab_max_width: 250px !important;
+  --tab_min_width: 100px !important;
+  --tab_max_width: 100px !important;
   
   /* for tabs_multiple_lines.css */
   --tab_min_width_mlt: 100px !important;
-  --tab_max_width_mlt: 200px !important;
-  --tabs-lines: 3 !important; 
+  --tab_max_width_mlt: 100px !important;
+  --tabs-lines: 4 !important;
 
   /* for bookmarks_toolbar_multiple_lines.css */
   --bookmark_items_height: 22px !important; /* <- bookmark items - line height */
